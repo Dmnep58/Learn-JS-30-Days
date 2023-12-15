@@ -1,0 +1,33 @@
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .home .name p {
+        text-align: center;
+        font-size: large;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .description .imagediv {
+        height: auto;
+        padding: 10px;
+    }
+    
+    .description .descriptiondiv {
+        margin-top: 10px;
+        text-overflow: initial;
+        text-align: justify;
+        padding: 10px;
+    }
