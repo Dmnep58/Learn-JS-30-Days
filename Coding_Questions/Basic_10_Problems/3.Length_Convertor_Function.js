@@ -9,4 +9,7 @@ function mTOCm(number) {
 }
 var number = 1;
 
-va
+var meter = kmToM(number);
+var centimeters = mTOCm(meter);
+
+console.log(meter + " " + centimeters);
