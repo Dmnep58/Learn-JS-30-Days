@@ -10,8 +10,8 @@ console.log(element);
 
 /* 1.b. set method --> while using this method we can set the style having some change  
         like : in css  bakground-color:red;  
-                    but in this we use capital letter of the word just after hypen
-                            like: backgorundColor ="red" */
+                but in this we use capital letter of the word just after hypen
+                        like: backgorundColor ="red" */
 
 document.querySelector("#name").style.backgroundColor = "grey";
 document.querySelector("#name").style.fontSize = "larger";
@@ -48,8 +48,34 @@ console.log(classlists);
 
 
 /* Methods of classList */
+
 /* 1. add() method it will add a class to the tag we want like */
 document.querySelector("#home").classList.add("you");
 
 /* 2. remove() method will be removing class from tag like */
 document.querySelector("#home").classList.remove("you");
+
+/*3. length method to find the length of a tag i.e return how many calsses is there in a tag */
+var classlen = document.getElementById("home").classList.length;
+console.log(classlen);
+
+/*4. toggle() method  it add and removes the class as per instructions like if u click it once it will 
+add a class and anotehr click on it will remove the same class  like: */
+
+document.getElementById("aboutheading").addEventListener("click", abc);
+
+function abc() {
+    document.getElementById("aboutheading").classList.toggle("wow");
+};
+
+
+/*5. item() method return the name of the class present in the index */
+
+var classname = document.getElementById("home").classList.item(1); // name varies to index value like index 0 == security , index 1 == to.
+console.log(classname);
+
+
+/*6. contains() method returns the value showing that the class is present or not */
+
+var classpresent = document.getElementById("home").classList.contains("to");
+console.log(classpresent);

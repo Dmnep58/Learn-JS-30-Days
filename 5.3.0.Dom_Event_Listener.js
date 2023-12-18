@@ -33,6 +33,16 @@ function changeSize() {
 
 
 // 2.a using multiple methods in single tag
-document.getElementById("aboutheading").addEventListener("click", function() {
+document.getElementById("aboutheading").addEventListener("mouseleave", mouseleaving);
+
+function mouseleaving() {
     document.getElementById("aboutheading").style.border = "10px solid red";
-});
+
+    // remove the function event
+    document.getElementById("aboutheading").removeEventListener('click', changeSize);
+}
+
+
+
+/* yadi kunai function (EVENT) chali rako xa ani teslai hataunu xa vane tyo vanda aphila occure hune event ma remove event listener rakherw 
+tyo function jasle event call gardai xa teslai hatye dine */
