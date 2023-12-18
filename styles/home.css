@@ -31,3 +31,19 @@
         text-align: justify;
         padding: 10px;
     }
+    
+    .name #myname {
+        color: crimson;
+        font: optional;
+        font-size: larger;
+    }
+    
+    .home .xyz {
+        color: black;
+    }
+    /* using the Dom css style 5.2 */
+    
+    .homies {
+        background-color: yellow;
+    }
+    /* using the dom action event listener */
