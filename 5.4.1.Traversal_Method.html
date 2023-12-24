@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal Methods</title>
+
+    <style>
+        .outer {
+            margin: 0 auto;
+            width: auto;
+            height: 550px;
+            background-color: coral;
+            padding: 10px;
+        }
+        
+        .inner {
+
+            height: 350px;
+            margin: 100px auto 0;
+            background-color: rgb(202, 31, 232);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .inner div{
+            background-color: aliceblue;
+            padding: 20px;
+            margin: 4px;
+            width: 50px;
+            height: 20px;
+            box-shadow: inset 2px 1px 2px 1px #343333,
+                        inset 3px 2px 3px 2px #242323;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer" id="outer">outer
+        <div class="inner" id="inner">
+            <div>A</div>
+            <div>B</div>
+            <div id="child-c">C</div>
+            <div>D</div>
+            <div>E</div>
+        </div>
+    </div>
+    
+    <script src="5.4.0.DOM_Traversal_Methods.js"></script>
+</body>
+</html>
