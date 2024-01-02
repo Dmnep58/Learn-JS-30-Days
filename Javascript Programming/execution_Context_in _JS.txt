@@ -1,0 +1,116 @@
+    JS is single threaded and all the things in JavaScript is a process.
+
+                -------  JavaScript Execution Context --------
+
+1. Global Execution Context  <--- this refer the Global Execution Context
+
+2. Function or Functional Execution Context  
+
+3. Eval Execution Context
+
+
+
+        ----   Phases of Creation ---------
+
+        1. Memory Creation Phase  or Creation Phase
+                    Memory is allocated.
+
+        2. Execution Phase
+            execution occurs in Execution Phase.
+
+
+
+        example 1:
+
+        1. let a = 10
+        2. let b = 5
+
+        3. function sum ( c , d){
+        4.     let total   = c + d
+        5.     return total
+        6. }
+
+        7. let result1 = sum( a, b)
+        8. let result2 = sum(5 , 12)
+
+
+        --- steps of Execution ----
+
+
+                ----------- cycle 1 Memory allocation Phase ---------------
+
+                1. Global Execution  <--- allocated to this
+
+                2. Memory Phase  <-- all variables are allocated with memory 
+
+                        line 1   a --> undefined
+                        line 2  b ---> undefined
+                        line 3 to 6  sum --> defination
+                        line 7 result1 --> undefined
+                        line 8 result2 --> undefined
+
+                --------------- cycle 2 Execution Phase ---------------
+
+                3. Execution Phase
+
+                     line 1   a <--- 10;
+                     line 2  b <--- 5;
+
+                     line 7  sum function have an execution cycle 
+                                        new variables Environment  +  Execution Thread
+
+                                        a. Memory Phase
+                                                a ---> undefined
+                                                b ---> undefined
+                                                total ---> undefined
+
+                                        b . Execution Phase
+                                             c --> 10
+                                             d --> 5
+                                             total <-- 15
+
+                                             total will be returned to Global Execution Context.
+
+                                             after this the enviroment and requirement is done it will be deleted.
+
+
+                     line 8 again sum function called and  step 2 and 3 are called again
+                                        new variables Environment  +  Execution Thread
+
+                                        a. Memory Phase
+                                                a ---> undefined
+                                                b ---> undefined
+                                                total ---> undefined
+
+                                        b . Execution Phase
+                                             c --> 10
+                                             d --> 5
+                                             total <-- 15
+
+                                             total will be returned to Global Execution Context.
+                                             and  the enviroment will be deleted.
+ 
+
+
+
+ 
+ 
+        --------------- call Stacks -----------------------
+
+
+        |                           |
+        |                           |
+        |                           |
+        |                           |
+        |                           |
+        |                           |
+        |       other funcitons     |
+        |---------------------------|
+        |   Global Execution        |                        
+        |___________________________|
+
+        uses the Lifo Principle last in first out Principle
+
+        in browser go to inspect -->  source and u can see the call stack in it.
+        
+
