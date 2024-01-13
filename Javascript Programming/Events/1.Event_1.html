@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+
+    <style>
+        .headings h1{
+            width: 200px;
+            height: 200px;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <div>
+            <h1 id="d">D</h1>
+        </div>
+        <div><h1>E</h1></div>
+        <div><h1>V</h1></div>
+        <div><h1>I</h1></div>
+        
+        
+    </div>
+</body>
+
+<script>
+    // atttachEvent
+    // JQuery on
+    
+    // type , timestamp , Preventdefault
+    // target , toElement , srcElement, currentTarget
+    // clientX, clientY , offset , scrrenX , screenY
+    // altkey , ctrlkey, shiftkey , keyCode
+
+/*----------------------------------------------------------------------------------------*/
+
+    // event propogation
+            //-> event bubbling -->  inside to outside
+            //-> event capturing --> outside to inside
+                    // --> that true and the false value reflects this
+
+/*    document.getElementById('heading').addEventListener('click',function(){
+        console.log("click inside");
+    }, false);
+*/
+
+
+/* document.getElementById('d').addEventListener('click',function(e){
+        //<!-- console.log("D clicked"); -->
+
+        e.stopPropagation(); //->> prevents the bubbing of the event
+    } , false);
+*/
+
+/*----------------------------------------------------------------------------------------*/
+
+
+    // event function bubbling has default value false it is not required ot write explicitly
+    
+    /*  document.getElementById('d').addEventListener('click',function(e){
+        e.preventDefault(); //->> prevents the bubbing of the event
+        e.stopPropagation();
+        console.log("D clicked");
+    });
+    */
+
+
+/*----------------------------------------------------------------------------------------*/
+
+    // remove the element with the help of parent node.
+
+    document.querySelector('#heading').addEventListener('click',function(e){
+        console.log(e.target.tagName)
+
+        if(e.target.tagName === 'H1'){ // delete the element only if the tagName is id so that or element will not get affected.
+            console.log(e.target.id);
+            let removeit = e.target.parentNode;
+            removeit.remove();
+        }
+        
+        // removeit.parentNode.removeChild(removeit)
+    })
+
+
+
+    // mdn documentation
+
+
+</script>
+</html>
