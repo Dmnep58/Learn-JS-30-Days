@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Devi Prasad Mishra</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+  /*  const sayName = function(){   // time will be in millisecond
+        console.log("Devi");
+    }
+
+    const changetext = function(){
+    document.querySelector('h1').innerHTML = "Devi lal";
+    }
+
+    const change =setTimeout(changetext,2000)
+*/
+
+
+
+    //clearTimeout(change)  // it will take the reference of the timeout which should be stopped
+
+    /* document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(change)
+        console.log("stopped")
+    })
+    */
+
+
+
+
+
+    // setInterval --> 
+    /*const interval = function(){
+        console.log("devi",Date.now())
+    };
+    */
+
+    // setInterval(interval,1000)
+
+
+// it has third parameter
+
+// to stop this we have clearInterval
+// clearInterval(interval);
+
+
+const start = function(){
+    console.log("hi devi start");
+}
+
+document.querySelector("#start").addEventListener('click',function(e){
+   // setInterval(start,1000)
+})
+
+document.querySelector("#stop").addEventListener('click',function(e){
+    console.log("devi stop")
+   //  clearInterval(start)
+})
+
+</script>
+</html>

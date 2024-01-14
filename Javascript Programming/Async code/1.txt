@@ -1,0 +1,43 @@
+// Asynchronous code
+
+
+
+JavaScript default behaviour is --> 1. Synchronous
+                                    2. Single Threaded
+                
+
+--> Execution context in JavaScript  --> execute one line of code at a time.
+
+--> each operation waits for the last one to complete before Execution
+
+
+
+
+
+Blocking code vs Non Blocking code
+-------------------------------------
+
+Blocking code --> block the flow of program --> read file Sync
+
+Non Blocking code --> Does not block Execution --> Read file Sync
+
+
+
+-->  Event loop image in images
+
+---> task queues add the call backs to call stacks
+---> promises or higher priority Queues
+
+
+
+-------------Apis in JavaScript-------
+1. fetch
+        has a concept called promises which has higher priority.
+
+
+
+
+
+
+
+
