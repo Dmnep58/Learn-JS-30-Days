@@ -1,0 +1,31 @@
+
+                    API  --> Application Programming Interface
+----------------------------------------------------------------------------------------------------------
+
+        It gives you 2 things
+                --> protocols
+                --> Data
+
+
+--------------------------------------------------------------------------------------------------------------
+        login with google , facebook and all things are container anywhere which can be get from api's
+
+---------------------------------------------------------------------------------------------------------------
+
+talking between 2 system 
+like  between frontend and backend
+backend and backend and all others
+
+---------------------------------------------------------------
+learning document --> https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+
+
+
+weather api ---> https://api.openweathermap.org/data/2.5/onecall?lat=36.1146&lon=-115.1728&exclude=minutely,hourly,alerts&appid=af829cd4d10ddacc5ff724f6845c5f6e&units=imperial
+
+
+
+mdn documentation
+---------------->
+
+github api mine --> https://api.github.com/users/Dmnep58

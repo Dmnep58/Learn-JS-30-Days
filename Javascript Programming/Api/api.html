@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <div class="githubdata">
+        <img id="avatar" src="" alt="devi" width="250" height="250">
+        <h3 id="follower"></h3>
+    </div>
+</body>
+
+<script>
+    const requestUrl = "https://api.github.com/users/Dmnep58";
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET' , requestUrl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)  // this references to xhr ( current context )
+            console.log(data)
+            //console.log(`Image is ${data.avatar_url}`)
+            let imgsrc = `${data.avatar_url}`;
+
+            const img = document.querySelector('#avatar').src = imgsrc;
+
+            //console.log(`followers are ${data.followers}`) 
+
+            document.querySelector('#follower').textContent = `followers are  ${data.followers}`;
+
+        }
+    }
+    xhr.send();
+</script>
+</html>
