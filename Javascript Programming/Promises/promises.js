@@ -82,10 +82,6 @@ PromiseFour.then( (user) => {
 .finally( () => console.log('The promise is either rejected or resolved'))
 
 
-
-
-
-
 // Promise Five
 
 const PromiseFive = new Promise( (resolve , reject) => {

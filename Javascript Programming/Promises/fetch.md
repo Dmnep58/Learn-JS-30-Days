@@ -1,7 +1,7 @@
 ## fetch api
 -----------------
 
-the global fetch() method starts rhe process of fetching a resource from the network
+the global fetch() method starts the process of fetching a resource from the network
 returning a promises which is fulfilled once the response is available.
 
 A fetch() promise only reject when a network error is encountered.
